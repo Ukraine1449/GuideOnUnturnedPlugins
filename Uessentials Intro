@@ -1,0 +1,19 @@
+Uessentials is an Unturned plugin which I would reccomend every Unturned server to have and use. It shares some simmilarities with the plugin EssentialsX from Minecraft, However
+not much is shared between them other then what they try to acomplish. Uessentials is a plugin which has everything from moderation, to deathmessages enabling owners and developers
+to have a lot of functionality and usability in 1 plugin. In the following pages I will discuss how to use, and what there is to uessentials. This is the first guide. I hope to add 
+to this repository some information from others developers. Here are the current parts of Uessentials:
+1. Moderation.
+2. Auto Announcment.
+3. Kits
+4. Warps
+5. Rules 
+6. Join/Leave messages
+7. Death messages.
+8. Polling people in the server
+9. Anti spam
+10. Home/tpa
+11. AutoCommands
+12. Blacklisting things from /i and /v
+Everything will be talked about with a section deicated to it. A final 2 sections will show how to use it and its perms.
+
+Uessentials Github: https://github.com/uEssentials/uEssentials
