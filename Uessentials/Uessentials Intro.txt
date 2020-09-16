@@ -3,8 +3,8 @@ Uessentials is a plugin made for Unturned which makes a lot of plugin seem usele
 for your entire server. This guide is meant to help with the permissions, configurations, commands and much more. Uessentials has a great github page but it is missing some large 
 pieces of information. Here is the index for this guide:
 1. General overview of the plugin and examples of use. C
-2. Moderation and AntiSpam C
-3. AutoAnnouncer
+2. Moderation and AntiSpam 
+3. AutoAnnouncer/autocommands
 4. Kits
 5. Warps
 6. Tpa/home/tp
