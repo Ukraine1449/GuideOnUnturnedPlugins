@@ -1,5 +1,5 @@
 # EasyAmmo
-##index
+## index
 * [General Info](#general-info)
 * [Usage](#usage)
 * [Commands](#commands)
