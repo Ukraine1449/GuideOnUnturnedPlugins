@@ -1,7 +1,6 @@
 # EasyAmmo
 ## index
 * [General Info](#general-info)
-* [Usage](#usage)
 * [Commands](#commands)
 * [Source Code Github Repo](#source-code-github-repo)
 
