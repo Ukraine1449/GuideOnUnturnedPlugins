@@ -1,0 +1,50 @@
+Section 4. Kits
+
+One of the most well known uses of uessentials is for its kit module. This allows you to create, edit, and give kits to people. Here I will discuss how to set up kits and how to 
+distribute them. The first thing needed is the permission to create kits. The first permission is >essentials.command.createkit<. This permission will allow the people with it 
+to create kits. This permission will allows users who have it to delete kits>essentials.command.deletekit<, which can be a form of editing large parts of the kit, by giving yourslef 
+the kit, then deleting it and recreating it, but edited. The next permission that will be shown is to edit kits >essentials.command.editkit<. This can be used to add vehicles, XP or 
+items to a kit. This is a command to add small ammounts of items, and is the best way of adding vehicles and XP to kits. To create a kit, have the items you want in your inventory
+as creating a kit is like creating ad uplicate of your inventory. When you are done giving yourslef the items do the following command: >/ckit (kit name) (kit cooldown)<. 
+Dissasebling the command, the first part which is /ckit is the command which tells the plugin that the kit is being created, there is then a space folllowed by a kit name. the kit 
+name has to be 1 word, however it can use dashes and underscores (Dash- Underscore_) as spaces. The last part will be the cooldown for only this kit which is in secconds. 
+Doing this: >/ckit Starter_for-all 60< will create a kit called Starter_for-all with a cooldown of 60 secconds. Using >/dkit (kit name)< will delete the kit with the name stated.
+Example >/dkit Starter_for-all<. This will delete the kit and all its contents. using >/ekit (kit name) (what you want to do to the kit)<. I will talk about each individual thing
+you can do. >/ekit (kitname) view< will give you a list of items in the kit. Example >/ekit Test view<. Doing this will give you a list of IDs and items in the kit.  
+Doing >/ekit (kit name) additem (item type) (ID)< will add something to the kit. There are 3 types: Item, Vehicle and xp. Items are added through putting in the item ID like 
+ Example >/ekit test additem item 15< will add a medkit (which has ID of 15) to the kit. Vehicles are also added through IDs. Example: >/ekit additem vehicle 140<. This will add 
+ a jet (which has the ID of 140) to the kit. When spawned a jet will spawn infront of the person getting the kit.  Adding XP works through setting the number of XP. Example: 
+ >/ekit test additem xp 100<. This will add 100 XP to the kit, so when recieved this will give 100 xp to the person getting the kit. The next part is 
+ >/ekit (kit name) delitem (item type) (ID)< in this, it is the opposite of additem. It works the same exept instead of adding something to a kit, it removes part of it. Example
+ >/ekit test delitem item 15<. This will remove the medkit from the kit. The same can be done with vehicle and xp. The next part is called set. >/ekit (kit name) set ( variable)<. 
+ The first part of set, is name change. Example >/ekit test set name Test2<. This will change the name of the kit from test to Test2. This will only change the name and nothing else.
+ The next part is called cost. This is used for when using an ingame economy based on xp. The can change the cost of the kit in xp.  Example >/ekit test set cost 20<. This will 
+ set the cost of the kit from anything that it was before, to a cost of 20. The next part is Cooldown, >/ekit (kit name) set cooldown (cooldown in seconds)<. This command will change
+ the cooldown fro whatever it was to the variable put there. Example >/ekit test set cooldown 100<. This will set the kit cooldown from whatever it was to 100 secconds, while 
+ not affecting anything else. And the final part of set is Resetcooldownwhendie. >/ekit (kit name) set resetcooldownwhendie (true/false)<. Looking at this, resetcooldownwhendie means
+ that the cooldown of this kit gets set to 0 if the person who used the kit dies. The variable can only be set to true or false. If set to true this kit will have a cooldown of 0
+ if the person who gave themself the kit dies while cooldown is above 0, if the cooldown is 0 it doesnt change. If set to false the cooldown will not change in any way upon death of 
+ the person who gave themself the kit. In addition to creating kits there are also 3 perms that people will need to see and give themself the kits. The first perm to see the kits 
+ available to that person is >essentials.comman.kits<. This will give the person to do /kits, which will only let them see the kits availbe to them. The second permission needed to 
+ get a kit is >essentials.command.kit<. This will give permission for users to do the command /kit. Without this even if the user has acces to the kits, they will not be able to
+ get those kits. The third and final part is >essentials.kit.(kit name)<. This permission is the one that gives acces to individual kits. Example: >essentials.kit.test<. This will
+ give the user permission to acces the kit called test.
+ 
+ Example of a perm group that can edit, delete, and create kits. It can also acces kit test and see what kits it has acces to.
+     <Group>
+      <Id>Test</Id>
+      <DisplayName>test</DisplayName>
+      <Prefix />
+      <Suffix />
+      <Color>white</Color>
+      <Members />
+      <Priority>1000</Priority>
+      <Permissions>
+        <Permission Cooldown="0">essentials.command.createkit</Permission>
+        <Permission Cooldown="0">essentials.command.deletekit</Permission>
+        <Permission Cooldown="0">essentials.command.editkit</Permission>
+        <Permission Cooldown="0">essentials.command.kits</Permission>
+        <Permission Cooldown="0">essentials.command.kit</Permission>
+        <Permission Cooldown="0">essentials.kit.test</Permission>
+      </Permissions>
+    </Group>
