@@ -10,9 +10,7 @@ pieces of information. Here is the index for this guide:
 6. Tpa/home/tp
 7. /i /v 
 8. Blacklisting 
-9. Polling
-10. Permissions.
-11. Misc commands
+9. Misc commands
 
 Some Usefull info: The location of Uessentials files is in Servers>server>rocket>Plugins>Uessentials folder
 Writen and Edited by Ukraine1449 and ItzEdInYourBed
