@@ -13,7 +13,7 @@ This guide is meant to help with the permissions, configurations, commands and m
 Uessentials has a great github page but it is missing some large pieces of information. Here is the index for this
 guide:
 
-1. General overview of the plugin and examples of use. C
+1. General overview of the plugin and examples of use.
 1. Moderation and AntiSpam
 1. AutoAnnouncer/autocommands
 1. Kits
