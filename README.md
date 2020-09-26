@@ -12,7 +12,7 @@ I hope all questions can be answered and if not here is our discord if you would
 
 # Maintainers
 
-Currently being worked on by
+## Currently being worked on by
 * Ukraine1449 (Ukraine#1449)
 * ItzEdInYourBed (ItzEdInYourBed#0001)
 * Bradler26 (Brad#1000)
