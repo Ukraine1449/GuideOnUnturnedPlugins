@@ -27,6 +27,6 @@ The following permission group will give users the permission to spawn vehicles 
       <Priority>90</Priority>
       <Permissions>
         <Permission Cooldown="0">essentials.command.item</Permission>
-        <Permission Cooldown="0">essentials.command.item</Permission>
+        <Permission Cooldown="0">essentials.command.vehicle</Permission>
       </Permissions>
     </Group>
