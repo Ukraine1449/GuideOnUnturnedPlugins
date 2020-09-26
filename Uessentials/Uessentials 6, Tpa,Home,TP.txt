@@ -1,0 +1,82 @@
+Section 6, Tpa, home, tp, tpall
+
+Tp/tphere
+The TP command can be used to teleport a user to a location or another player. The only permission needed to use this command is >essentials.command.tp<. This will allow users to do
+>/tp (user)< or >/tp (location)<. The first and most basic use is to do >/tp (user). For example someone with the permission to do >/tp< could do >/tp Ukriane< and will teleport to
+a user named Ukraine (me). The next usage is >/tp location<.  Example (I am using PEI as an example). >/tp start<. This command will teleport the user to the place called stratford on
+PEI. The  next usage is >/tp (user) (user)<. This will teleport 1 user to another user. Example: >/tp Ukraine Shark<. This will teleport the user named Ukraine to the user named
+shark. The next usage is to teleport another player to a location. (this can also be done on yourself). >/tp (user) (location)<, doing this will teleport the selected user to the 
+specific location. Example: >/tp Ukraine strat<. This command will teleport me (Ukraine) to the location called stratford (PEI). The next thing to talk about relating to tp is 
+>/tphere<. This has 1 purpose which is to teleport a user to you. The permission is >essentials.command.tphere<. This is used as >/tphere (user)<. Example: >/tphere shark< will 
+teleport a user named shark to me. 
+
+Tpall
+The command >/tpall< is used to teleport all players to you. It will also teleport you to the exact position you were standing at. The permission for it is >essentials.command.tpall<.
+Example: >/tpall<. This command will teleport every single player to you whereever they are. 
+
+Tpa
+The tpa command is used on most servers as a way to send a request for 1 player tot teleport to the other. This is done through the user who wants to teleport to another user, sending
+a request to the other user to teleport to them. This request can be canceled by the user sending it, accepted by the user recieving, or denied. Here is an example of a situation. 
+Jane is the one sending a request to John. Jane sends a tpa to John with the command >/tpa John<. If she sent it to him accidentally and meant to send it to another player she 
+could do the command >/tpa cancel< which would cancel the request. If John wanted to accept the tpa, he could do the command >/tpa a< or >/tpa accept<, (both of these are excatly 
+identical in function).If John wanted to deny the request from Jane, he could do the command >/tpa deny< which would remove the deny the tpa. Moving on, the first permission needed
+is the permission to do the actual command. This is the permission to do the command >/tpa<: >essentials.command.tpa<, this will give users the permission to do >/tpa< but nothing 
+else. To give users the permission to send a tpa, this permission needs to be given: >essentials.command.tpa.send<. This  will give users the permission to send a tpa if combined with 
+the first permission. This however will only give users the permission to send a tpa and not accept it. The following permission will allow users to accept a tpa 
+>essentials.command.tpa.accept<. This will allow users to do the >/tpa a< or >/tpa accept< commands. In combination these 3 will give players the permission to send and recieve tpa
+requests. The following permission is given to users if you want them to be able to cancel the tpa they sent: >essentials.command.tpa.cancel<. This will allow users to do the command
+>/tpa cancel< which will cancel their tpa request to another player. The following permission will allow users to deny a tpa request sent to them by another user: 
+>essentials.command.tpa.deny<. This permission will allow users to deny a playerers request to tpa, (request can also be just ignored). In combination, these 5 permissions will give
+users the permission to do >/tpa<, >/tpa a<, >/tpa cancel<, and >/tpa deny<. Example of >/tpa<: >/tpa John<. 
+  "Tpa": {
+    "CancelTeleportWhenMove": false,
+    "ExpireDelay": 10,
+    "TeleportDelay": 5
+The first line of the configuration just says the name of the module. The second one called "cancelteleportwhenmove", this only takes True or False variables. This determins if the 
+user can move while teleporting to another. If set to true, when player sends a tpa and it is accepted, they have to stand still while teleporting otherwise it is canceled. if set
+to false, the user can move if they sent a tpa request and it was accepted. The last line which is "TeleportDelay", tells the module how much to wait before the request being 
+accepted and the player being teleported. This takes numbers as secconds. 60sec:1min, 120=2min. 
+
+Home
+the >/home< command is used tot teleport a user to their bed. The usage is simple, just do >/home< when you want to go to your bed and you will be teleported. The permission to give
+to users for them to be able to do this command is >essentials.command.home<. To use this command, users can claim 1 bed, and when doing >/home< they will be teleported to it. 
+  "Home": {
+    "TeleportDelay": 5,
+    "CancelTeleportWhenMove": false
+Looking at this config, the first line defines the module. The second one titled "TeleportDelay" is to set the delay between the command being done (presuming a bed has been claimed)
+and the user teleported. The delay isnt done for admins. The third line titled "cancelteleportwhenmove" is there to tell the server if the user can move while being teleported 
+(waiting for the delay to end). This only accepts True or False variables. The True would make it so that when the user is on the delay, they cannot move, otherwise the teleport 
+will be canceled. The False makes it so that a user can move while on the delay to be teleported.
+
+The following 2 permission groups will have /tp /tpall /tpa and /home
+
+    <Group>
+      <Id>Test</Id>
+      <DisplayName>test</DisplayName>
+      <Prefix />
+      <Suffix />
+      <Color>#6aff4d</Color>
+      <Members />
+      <Priority>100</Priority>
+      <Permissions>
+        <Permission Cooldown="0">essentials.command.home</Permission>
+        <Permission Cooldown="0">essentials.command.tpa.cancel</Permission>
+        <Permission Cooldown="0">essentials.command.tpa.deny</Permission>
+        <Permission Cooldown="0">essentials.command.tpa.accept</Permission>
+        <Permission Cooldown="0">essentials.command.tpa.send</Permission>
+        <Permission Cooldown="0">essentials.command.tpa</Permission>
+      </Permissions>
+    </Group>
+    <Group>
+      <Id>test</Id>
+      <DisplayName>test</DisplayName>
+      <Prefix />
+      <Suffix />
+      <Color>#6aff4d</Color>
+      <Members />
+      <Priority>100</Priority>
+      <Permissions>
+        <Permission Cooldown="0">essentials.command.tpall</Permission>
+        <Permission Cooldown="0">essentials.command.tp</Permission>
+      </Permissions>
+    </Group>

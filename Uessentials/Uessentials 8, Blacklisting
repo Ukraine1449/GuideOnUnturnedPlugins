@@ -1,0 +1,8 @@
+Section 8, Blacklisting
+
+Blacklisting for Uessentials is used to stop users from spawning items from /i and /v. Please not that this doesnt stop users from getting these items another way, this only makes them not spawnable for people with /i and /v. This is overriden by admin permissions. Here is the config in the module in config.json of uessentials:
+    "Enabled": false
+  },
+  "GiveItemBlacklist": [15,17],
+  "VehicleBlacklist": [],
+Looking at the first line, it tells the plugin if the module is enabled or disabled. the Enabled line accepts only True or False variables. True tells the module to blacklist the given IDs. False tells the module to not blacklist any IDs given. The next line is "GiveItemBlacklist". This tells the plugin the IDs of items to blacklist. The usage is between the brackets ([]). The first number between the brackets has to have a coma, the next one has to have one too. The last one doesnt have a coma (,). Example: >[15,17,4]<. This will blacklist a medkit, a military drum mag and a eagle fire. Please note that the all numbers exept last has to have a comma after it. The last one will not have a comma. The next part is "VehicleBlacklist". This is to blacklist vehicles from being spawned by users. The usage is same to the item. You input the vehicle IDs. Example: >[140,145,120]<. this will blacklist the jet, the coalition jeep and russian tank. 

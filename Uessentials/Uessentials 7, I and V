@@ -1,0 +1,32 @@
+Section 7, /i /v
+
+/i aka Item
+the >/i< command is used to give players and yourself items. It can be used to give yourself, another user or all users in the server. The permission for this command is 
+>essentials.command.item<. The first usage is to give yourself an item. Example: >/i 15<. The first usage is using an ID. This command will give you a medkit. The next usage is using 
+quotation marks>""<. Example >/i "griz mag"<. This will give the user a grizly mag. This can be used with however many words you want. The next usage is to give you an item with a 
+word. Example >/i medk<. This will give you a medkit. This only accepts 1 word. The next usage is to give yourself multiple of something. Example >/i "griz mag"69<. This will give 
+you 69 grizly mags. The same works for IDs and words. Example: >/i medkit 420<. This will give you 420 medkits. Example: >/i 15 69<. This will give you 69 medkits. The usage here is 
+>/i (item ID/Name/Name in "") (number of items)< The next usage is to give items to other players. Example: >/i jane 14 5<. This will give jane 5 water bottles. The usage is like this
+ >/i (player name) (item) (number of items)<. Please know that only 1 word can be put as the player name. This works the same for IDs, Words and quotation marks. 
+ Example >/i john "mili mag" 10<. This will give John 69 military mags. The next usage is to give all players in the server an item. The usage is >/i all (item) (number of items)<. 
+ This will give all players a specific items. Example >/i all 17 15<. This will give all players in the server 15 military drum mags. 
+ 
+
+/v aka vehicle 
+This is the command to spawn a vehicle for yourself, others or all users on a server. The permission to execute this command is >essentials.command.vehicle<. The primary usage is >/v (vehicle)<. The vehicle part is there to be either an ID (Number of the vehicle), the name in one word or the name in qutation makrs (""). Example >/v 140< this is the ID usage. This will spawn a fighter jet. The usage for the name of the vehicle is this. Example: >/v tank<. This is will spawn a russian tank (120). The next usage is with the name in quotation marks. Example: >/v "yellow hatch"<. This will spawn a yellow hatchback. The next usage is to give a vehicle to another player. >/v (player name) (vehicle)<. Example: >/v joe 140< will give a user named joe a fighter jet. This also works with IDs, names and names in quotation marks. The next part is to give all players vehicles. >/v all (vehicle ID)<. This will give all users the specific vehicle. Example >/v all 120<. This will give all users a tank. 
+
+The following permission group will give users the permission to spawn vehicles and items. 
+
+    <Group>
+      <Id>test</Id>
+      <DisplayName>test</DisplayName>
+      <Prefix />
+      <Suffix />
+      <Color>9F162F</Color>
+      <Members />
+      <Priority>90</Priority>
+      <Permissions>
+        <Permission Cooldown="0">essentials.command.item</Permission>
+        <Permission Cooldown="0">essentials.command.item</Permission>
+      </Permissions>
+    </Group>
